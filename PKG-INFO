@@ -1,0 +1,30 @@
+Metadata-Version: 1.0
+Name: todocli
+Version: 0.0.1@alpha
+Summary: Python command line todo application.
+Home-page: https://github.com/okulbilisim/todo.py
+Author: Okulbilisim
+Author-email: info@okulbilisim.com
+License: MIT
+Description: python-todocli
+        ========================
+         
+        
+        
+        Usage
+        -----
+        
+        Clone this repository and adopt the todocli structure for your own project.
+        This is just a starting point, but I hope a good one. From there on, you should
+        read and follow http://python-packaging-user-guide.readthedocs.org/en/latest/,
+        the definite resource on Python packaging.
+        
+        
+        
+        
+        On Unix-like systems, the installation places a ``todocli`` script into a
+        centralized ``bin`` directory, which should be in your ``PATH``. On Windows,
+        ``todocli.exe`` is placed into a centralized ``Scripts`` directory which
+        should also be in your ``PATH``.
+        
+Platform: UNKNOWN

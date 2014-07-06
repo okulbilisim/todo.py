@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+cmdline_todocli.egg-info/PKG-INFO
+cmdline_todocli.egg-info/SOURCES.txt
+cmdline_todocli.egg-info/dependency_links.txt
+cmdline_todocli.egg-info/entry_points.txt
+cmdline_todocli.egg-info/top_level.txt
+todocli/__init__.py
+todocli/__main__.py
+todocli/stuff.py
+todocli/todocli.py

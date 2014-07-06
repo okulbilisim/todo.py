@@ -1,0 +1,3 @@
+[console_scripts]
+todocli = todocli.todocli:main
+
