@@ -27,6 +27,6 @@ setup(
     description = "Python command line todo application",
     long_description = long_descr,
     author = "Okulbilisim",
-    author_email = "bilgi@okulbilisim.com",
+    author_email = "info@okulbilisim.com",
     url = "https://github.com/okulbilisim/todo.py",
     )
