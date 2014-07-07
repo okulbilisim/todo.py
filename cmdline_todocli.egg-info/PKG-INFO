@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: cmdline-todocli
+Version: 0.0.1-alpha
+Summary: Python command line todo application
+Home-page: https://github.com/okulbilisim/todo.py
+Author: Okulbilisim
+Author-email: bilgi@okulbilisim.com
+License: MIT
+Description: #todo.py
+        
+        a To Do CLI application with SQLite backend
+        
+        ###INSTALLATION
+        
+        ```sh
+        $ python setup.py install
+        ```
+        
+        
+        ###USAGE
+        
+        
+Platform: UNKNOWN
