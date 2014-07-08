@@ -5,7 +5,7 @@ Summary: Python command line todo application
 Home-page: https://github.com/okulbilisim/todo.py
 Author: Okulbilisim
 Author-email: info@okulbilisim.com
-License: MIT
+License: UNKNOWN
 Description: #todo.py
         
         a To Do CLI application with SQLite backend
