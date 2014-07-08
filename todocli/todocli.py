@@ -15,10 +15,13 @@ def main():
   
   args = vars(parser.parse_args())
   if args['new'] != None:
-    print "adding new todo"
+    print bcolors.BLUE+"adding new todo"+bcolors.ENDC
+    new_item(args["new"])
   elif args['delete'] != None:
-    delete_item()
+    print bcolors.WARNING+"deleting a todo item"+bcolors.ENDC
+    delete_item(args["delete"])
   else:
+    print bcolors.GREEN+"YOUR TODO LIST"+ bcolors.ENDC
     list_items()
   print "\n\n\ndebug line : "
   print("Executing todocli version %s." % __version__)
@@ -27,7 +30,6 @@ def main():
 
 def new_item(todostr):
   conn = connect_todo_db()
-  print "adding new todo item"
   conn.execute("INSERT INTO TODOPY (TITLE) \
       VALUES ('"+todostr+"')");
   conn.commit()
@@ -35,11 +37,9 @@ def new_item(todostr):
 
 def delete_item(todo_id):
   conn = connect_todo_db()
-  print "deleting a todo item"
   conn.close()
 
 def list_items():
-  print "your todo list"
   conn = connect_todo_db()
   cursor = conn.execute("SELECT ID,TITLE FROM TODOPY")
   for row in cursor:
@@ -57,3 +57,10 @@ def check_create_todo_table():
 
 def connect_todo_db():
   return sqlite3.connect('todo.db')
+
+class bcolors:
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
