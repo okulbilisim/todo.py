@@ -23,10 +23,6 @@ def main():
   else:
     print bcolors.GREEN+"YOUR TODO LIST"+ bcolors.ENDC
     list_items()
-  print "\n\n\ndebug line : "
-  print("Executing todocli version %s." % __version__)
-  print("List of argument strings: %s" % sys.argv[1:])
-
 
 def new_item(todostr):
   conn = connect_todo_db()
@@ -37,14 +33,15 @@ def new_item(todostr):
 
 def delete_item(todo_id):
   conn = connect_todo_db()
+  conn.execute("DELETE FROM TODOPY WHERE ID = "+todo_id+"");
+  conn.commit()
   conn.close()
 
 def list_items():
   conn = connect_todo_db()
   cursor = conn.execute("SELECT ID,TITLE FROM TODOPY")
   for row in cursor:
-   print "ID = ", row[0]
-   print "TITLE = ", row[1]
+   print bcolors.BLUE,"#",bcolors.ENDC,row[0],"\t",row[1]
   cursor.close()
   conn.close()
 
