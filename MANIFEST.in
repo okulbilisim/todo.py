@@ -1,1 +1,4 @@
-include LICENSE
+include LICENSE README.md build_manpage.py
+
+include doc/*
+include doc/man_page/*
