@@ -7,7 +7,6 @@
 import re
 from setuptools import setup
 
-
 version = re.search(
     '^__version__\s*=\s*"(.*)"',
     open('todocli/todocli.py').read(),re.M).group(1)
