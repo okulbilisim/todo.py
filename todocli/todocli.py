@@ -54,7 +54,7 @@ def check_create_todo_table():
   conn.execute('''CREATE TABLE IF NOT EXISTS TODOPY
     (ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     TITLE           TEXT    NOT NULL,
-    PRIORITY        TINYINT NULL);''')
+    PRIORITY        TINYINT NOT NULL);''')
   conn.close()
 
 def connect_todo_db():
