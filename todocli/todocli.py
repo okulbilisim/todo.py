@@ -11,14 +11,17 @@ def main():
   check_create_todo_table()
   parser = argparse.ArgumentParser(description='Todo.py')
   parser.add_argument('-n','--new', help='new todo item', required=False)
-  parser.add_argument('-p','--priority', help='set priority of a new item', required=False)
+  parser.add_argument('-p','--priority', help='set priority of a new todo item', required=False)
   parser.add_argument('-d','--delete', help='delete a todo item with id', required=False)
 
   args = vars(parser.parse_args())
   if args['new'] != None:
     print bcolors.BLUE+"adding new todo"+bcolors.ENDC
     if args['priority'] != None:
-        new_item(args["new"], args['priority'])
+        if str(args['priority']).isdigit():
+            new_item(args["new"], args['priority'])
+        else:
+            print bcolors.WARNING+"priority value must be numeric"+bcolors.ENDC
     else:
         new_item(args["new"], 0)
   elif args['delete'] != None:
