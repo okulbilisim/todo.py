@@ -1,23 +1,23 @@
-#todo.py
+# todo.py
 
 a To Do CLI application with SQLite backend
 
-###INSTALLATION
+### INSTALLATION
 
 ```sh
 python setup.py install
 ```
 
 
-###USAGE
+### USAGE
 
-####New todo
+#### New todo
 
 ```sh
 todocli -n "Learn Colmak"
 ```
 
-####New todo with priority
+#### New todo with priority
 ```sh
 todocli -n "Learn Colmak" -p 10
 ```
